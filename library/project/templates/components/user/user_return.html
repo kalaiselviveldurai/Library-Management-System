@@ -1,0 +1,26 @@
+{% load static %}
+<div id="user-return" class="hidden">
+    <h3>Return a Book</h3>
+
+    <!-- 🔍 Search Box -->
+    <input type="text" id="search-return" placeholder="Search by title..." onkeyup="filterReturnBooks()">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Borrowed ID</th>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Borrowed At</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="return-table-body"></tbody>
+    </table>
+</div>
+
+<script src="{% static 'js/user_return.js' %}"></script>

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+</head>
+<body>
+    <div class="grid-container">
+
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+
+
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">menu_book</span> Library
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item" onclick="showSection('dashboard')">
+                    <a href="#"><span class="material-icons-outlined">dashboard</span> Dashboard</a>
+                </li>
+                <li class="sidebar-list-item" onclick="showSection('user-management')">
+                    <a href="#"><span class="material-icons-outlined">supervisor_account</span> User Management</a>
+                </li>
+                <li class="sidebar-list-item" onclick="showSection('book-management')">
+                    <a href="#"><span class="material-icons-outlined">menu_book</span> Book Management</a>
+<!--                </li>-->
+<!--                <li class="sidebar-list-item" onclick="showSection('borrower-management')">-->
+<!--                    <a href="#"><span class="material-icons-outlined">person</span> Borrower Management</a>-->
+<!--                </li>-->
+                <li class="sidebar-list-item" onclick="showSection('borrowing-transactions')">
+                    <a href="#"><span class="material-icons-outlined">autorenew</span> Borrowing Transactions</a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" onclick="logoutAdmin()"><span class="material-icons-outlined">logout</span> Logout</a>
+                </li>
+            </ul>
+        </aside>
+
+
+        <main class="main-container">
+            {% include 'components/dashboard.html' %}
+            {% include 'components/user_management.html' %}
+            {% include 'components/book_management.html' %}
+            {% include 'components/borrowing_transactions.html' %}
+        </main>
+    </div>
+
+    <script src="{% static 'js/admin_dashboard.js' %}"></script>
+</body>
+</html>

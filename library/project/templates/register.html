@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Registration Page">
+    <meta name="keywords" content="register, user registration, sign up">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="container">
+    <h2 id="title">User Registration</h2>
+    <p id="message"></p>
+    <form id="registerForm" method="post" action="/project/register/">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+<script src="{% static 'js/register.js' %}"></script>
+</body>
+</html>

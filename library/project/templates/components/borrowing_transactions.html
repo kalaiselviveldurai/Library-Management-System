@@ -1,0 +1,56 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/borrower_transactions.css' %}">
+<div id="borrowing-transactions" class="hidden">
+    <div class="main-title">
+        <p class="font-weight-bold">BORROWING TRANSACTIONS</p>
+    </div>
+
+    <div class="user-actions">
+        <div class="card" onclick="fetchAllBorrowingHistory()">
+            <div class="card-inner">
+                <p class="text-primary">View All Transactions</p>
+                <span class="material-icons-outlined text-blue">history</span>
+            </div>
+        </div>
+
+        <div class="card" onclick="showBorrowerModal()">
+            <div class="card-inner">
+                <p class="text-primary">Borrower Details</p>
+                <span class="material-icons-outlined text-green">assignment_ind</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="borrowing-history" class="hidden">
+    <h3>Borrowing History</h3>
+    <table id="borrowing-history-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Book</th>
+                <th>Borrower</th>
+                <th>Borrowed At</th>
+                <th>Due Date</th>
+                <th>Returned At</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </div>
+
+
+    <div id="borrower-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeBorrowerModal()">&times;</span>
+            <h3>Borrower Details</h3>
+            <form id="borrowerDetailsForm">
+                <label for="borrower-id">Borrower ID:</label>
+                <input type="number" id="borrower-id" name="id" required>
+                <button type="submit">View Details</button>
+            </form>
+            <div id="borrower-details-result"></div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/borrowing_transactions.js' %}"></script>

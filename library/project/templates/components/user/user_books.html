@@ -1,0 +1,45 @@
+{% load static %}
+<div id="user-books" class="hidden">
+    <h3>Available Books</h3>
+
+    <!-- 📊 Cards Section -->
+    <div class="main-cards">
+        <div class="card">
+            <div class="card-inner">
+                <p class="text-primary">Total Books</p>
+                <span class="material-icons-outlined text-blue">menu_book</span>
+            </div>
+            <span class="text-primary" id="total-books">0</span>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <p class="text-primary">Available Books</p>
+                <span class="material-icons-outlined text-green">check_circle</span>
+            </div>
+            <span class="text-primary" id="available-books">0</span>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <p class="text-primary">Checked Out</p>
+                <span class="material-icons-outlined text-red">cancel</span>
+            </div>
+            <span class="text-primary" id="checked-out-books">0</span>
+        </div>
+    </div>
+
+    <!-- 📚 Books Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="book-table-body"></tbody>
+    </table>
+</div>
+
+<script src="{% static 'js/user_books.js' %}"></script>

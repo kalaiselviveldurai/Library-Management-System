@@ -1,0 +1,30 @@
+<aside id="user-sidebar">
+    <div class="sidebar-title">
+        <div class="sidebar-brand">
+            <span class="material-icons-outlined">menu_book</span> Library
+        </div>
+    </div>
+    <ul class="sidebar-list">
+        <li class="sidebar-list-item" onclick="showSection('user-home')">
+            <a href="#"><span class="material-icons-outlined">dashboard</span> Dashboard</a>
+        </li>
+        <li class="sidebar-list-item" onclick="showSection('user-books')">
+            <a href="#"><span class="material-icons-outlined">menu_book</span> View Books</a>
+        </li>
+        <li class="sidebar-list-item" onclick="fetchAvailableBooksForBorrow(); showSection('user-borrow')">
+            <a href="#"><span class="material-icons-outlined">autorenew</span> Borrow a Book</a>
+        </li>
+
+        <li class="sidebar-list-item" onclick="showSection('user-return')">
+            <a href="#"><span class="material-icons-outlined">assignment_return</span> Return a Book</a>
+        </li>
+
+        <li class="sidebar-list-item" onclick="fetchBorrowingHistory(); showSection('user-borrowing-history')">
+            <a href="#"><span class="material-icons-outlined">history</span> My Borrowing History</a>
+        </li>
+
+        <li class="sidebar-list-item" onclick="logoutUser()">
+            <a href="#"><span class="material-icons-outlined">logout</span> Logout</a>
+        </li>
+    </ul>
+</aside>

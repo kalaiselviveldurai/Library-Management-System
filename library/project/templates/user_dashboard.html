@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/user_dashboard.css' %}">
+</head>
+<body>
+    <div class="grid-container">
+        {% include 'components/user/user_sidebar.html' %}
+
+        <main class="main-container">
+            {% include 'components/user/user_home.html' %}
+            {% include 'components/user/user_books.html' %}
+            {% include 'components/user/user_borrow.html' %}
+            {% include 'components/user/user_return.html' %}
+            {% include 'components/user/user_borrowing.html' %}
+        </main>
+    </div>
+    <script src="{% static 'js/user_dashboard.js' %}"></script>
+</body>
+</html>

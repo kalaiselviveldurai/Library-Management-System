@@ -1,0 +1,29 @@
+<!-- templates/components/sidebar.html -->
+<aside id="sidebar">
+    <div class="sidebar-title">
+        <div class="sidebar-brand">
+            <span class="material-icons-outlined">menu_book</span> Library
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+    </div>
+    <ul class="sidebar-list">
+        <li class="sidebar-list-item" onclick="showSection('dashboard')">
+            <a href="#"><span class="material-icons-outlined">dashboard</span> Dashboard</a>
+        </li>
+        <li class="sidebar-list-item" onclick="showSection('user-management')">
+            <a href="#"><span class="material-icons-outlined">supervisor_account</span> User Management</a>
+        </li>
+        <li class="sidebar-list-item" onclick="showSection('book-management')">
+            <a href="#"><span class="material-icons-outlined">menu_book</span> Book Management</a>
+        </li>
+<!--        <li class="sidebar-list-item" onclick="showSection('borrower-management')">-->
+<!--            <a href="#"><span class="material-icons-outlined">person</span> Borrower Management</a>-->
+<!--        </li>-->
+        <li class="sidebar-list-item" onclick="showSection('borrowing-transactions')">
+            <a href="#"><span class="material-icons-outlined">autorenew</span> Borrowing Transactions</a>
+        </li>
+        <li class="sidebar-list-item">
+            <a href="#" onclick="logoutAdmin()"><span class="material-icons-outlined">logout</span> Logout</a>
+        </li>
+    </ul>
+</aside>
