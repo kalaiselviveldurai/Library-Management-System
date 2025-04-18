@@ -1,0 +1,64 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.log
+*.pot
+*.mo
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+.Python
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# =====================
+# Django
+# =====================
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.pyc
+media/
+staticfiles/
+local_settings.py
+
+# =====================
+# IDEs & Editors
+# =====================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =====================
+# OS generated files
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# HTML/CSS/JS (no ignore usually needed)
+# =====================
+# (Unless you use a build tool like webpack, then ignore /dist or /build)
+
+# =====================
+# Environment Variables
+# =====================
+.env
+.env.*
+
+# Node modules (if using npm)
+node_modules/
+
